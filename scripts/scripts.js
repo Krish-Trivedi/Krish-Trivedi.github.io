@@ -1,4 +1,4 @@
-/****************** YOUR NAME: 
+/****************** YOUR NAME: Krish Trivedi
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
 
@@ -46,22 +46,25 @@ function recalculate() {
     - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
     - then, recalculate() the total cost.
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
-    // modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
 
 var modelButton = document.getElementById("model-button");
 
 function changeModel() {
-    var modeltext = document.getElementById("model-text");
+    var modelText = document.getElementById("model-text");
     if (modelName === "XYZ"){
         modelName = "CPRG";
-        modelText.innerHTML = " Model XYZ";
+        modelText.innerHTML = "Model CPRG";
+    } else {
+        modelName = "XYZ";
+        modelText.innerHTML = "Model XYZ";
     }
     recalculate();
 }
 
 modelButton.addEventListener("click", changeModel);
+
 
 
 
